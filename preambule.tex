@@ -8,6 +8,11 @@
 \usepackage{latexsym}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{enumerate}
+\usepackage{wrapfig}
 
 \oddsidemargin=0pt
 
@@ -18,7 +23,7 @@
 
 \newcommand{\insertpicc}[2]{
     \begin{figure}[H]
-        \includegraphics[width=0.8\textwidth]{{pics/#1}}
+        \includegraphics[width=1\textwidth]{{pics/#1}}
         \caption{#2}
     \end{figure}
 }
@@ -30,5 +35,9 @@
     \setlength{\voffset}{\originalVOffset}
     \setlength{\hoffset}{\originalHOffset}
 }
+
+\newcommand{\fact}[1]{\begin{center}\textbf{#1}\end{center}}
+
+\newcommand{\myref}[2]{\href{#1}{\textcolor{blue}{#2}}}
 
 \pagenumbering{gobble}
