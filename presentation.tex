@@ -1,5 +1,5 @@
 %\documentclass[dvips, intlimits, 8pt, unicode]{beamer} %для tex -> dvi -> ps -> pdf
-\documentclass[pdf, 9pt]{beamer} %Для Latex2Pdf  tex -> pdf
+\documentclass[pdf, 12pt]{beamer} %Для Latex2Pdf  tex -> pdf
 %В качестве размера лучше использовать 9pt
 %dvips нужно использовать только если использовать построение слайдов через PostScript
 %intlimits - стиль для пределов интегралов (по желанию)
@@ -55,9 +55,30 @@
 % Путь к файлам с иллюстрациями
 \graphicspath{{pics/}}
 
+\newcommand{\insertpicc}[2]{
+	\begin{figure}[H]
+		\includegraphics[width=1\textwidth]{{pics/#1}}
+		\caption{#2}
+	\end{figure}
+}
+
+\newcommand{\insertpdf}[1]{
+	\setlength{\voffset}{0cm}
+	\setlength{\hoffset}{0cm}
+	\includepdf[pages=-]{pics/#1}
+	\setlength{\voffset}{\originalVOffset}
+	\setlength{\hoffset}{\originalHOffset}
+}
+
+\newcommand{\myref}[2]{\href{#1}{\textcolor{blue}{#2}}}
+
 \begin{document}
 
 \input{sources/sasha/slides/body.tex}
+
+\input{sources/slava/slides/body.tex}
+
+\input{sources/alina/slides/body.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
