@@ -1,0 +1,70 @@
+%\documentclass[dvips, intlimits, 8pt, unicode]{beamer} %для tex -> dvi -> ps -> pdf
+\documentclass[pdf, 9pt]{beamer} %Для Latex2Pdf  tex -> pdf
+%В качестве размера лучше использовать 9pt
+%dvips нужно использовать только если использовать построение слайдов через PostScript
+%intlimits - стиль для пределов интегралов (по желанию)
+%unicode - обязательно
+
+%Пакеты для русского языка
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+%Пакет для вставки рисунков
+\usepackage{graphicx}
+
+\def\Blue#1{\textcolor{blue}{#1}}
+
+\usepackage{textcomp}
+\usepackage{tikz}
+\usepackage{times}
+\usepackage{mathptmx}
+
+\def\rmdefault{ftm}
+\def\sfdefault{ftx}
+\def\ttdefault{fer}
+\DeclareMathAlphabet{\mathbf}{OT1}{ftm}{bx}{it} % bx/it or bx/m
+
+%AMS TEX значки и пр.
+\usepackage{amsfonts}
+\usepackage{amsbsy}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{wrapfig}
+
+\usetheme{default}
+
+% Удаляем навигационную панель
+\setbeamertemplate{navigation symbols}{}
+
+% Устанавливаем поля (по умолчнанию - 1 см)
+\setbeamersize{text margin left=0.5cm, text margin right=0.25cm}
+
+%Более крупный шрифт для подзаголовков титульного листа
+\setbeamerfont{institute}{size=\normalsize}
+
+%Задание команды (\bluetext) для выделения конкретным (синим) цветом
+%\alert - выделение цветом выбранной "темы"
+\setbeamercolor{bluetext_color}{fg=blue}
+\newcommand{\bluetext}[1]{{\usebeamercolor[fg]{bluetext_color}#1}}
+
+%Если используется последовательное появление пунктов списков на слайде
+%(не злоупотребляйте в слайдах), чтобы
+%еще непоявившиеся пункты были все-таки немножко видны.
+\setbeamercovered{transparent}
+
+% Путь к файлам с иллюстрациями
+\graphicspath{{pics/}}
+
+\begin{document}
+
+\input{sources/sasha/slides/body.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\begin{center}
+		\Huge{\Blue{Спасибо за внимание!}}
+	\end{center}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
