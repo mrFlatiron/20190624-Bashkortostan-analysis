@@ -1,0 +1,18 @@
+\newcommand{\insertpicc}[2]{
+    \begin{figure}[H]
+        \includegraphics[width=1\textwidth]{{pics/#1}}
+        \caption{#2}
+    \end{figure}
+}
+
+\newcommand{\insertpdf}[1]{
+    \setlength{\voffset}{0cm}
+    \setlength{\hoffset}{0cm}
+    \includepdf[pages=-]{pics/#1}
+    \setlength{\voffset}{\originalVOffset}
+    \setlength{\hoffset}{\originalHOffset}
+}
+
+\newcommand{\fact}[1]{\begin{center}\textbf{#1}\end{center}}
+
+\newcommand{\myref}[2]{\href{#1}{\textcolor{blue}{#2}}}
